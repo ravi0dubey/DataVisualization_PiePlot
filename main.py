@@ -5,7 +5,7 @@ import seaborn as sns
 
 d7= {
     "Name":["Ravi", "Astha","Illisha","Lika","Radha","Ravi","Astha","Liku"], "Email":["r@gmail.com","a@gmail.com","i@gmail.com","l@gmail.com","ra@gmail.com","r@gmail.com","a@gmail.com","l@gmail.com"],
-    "Salary":[200,140,60,80,90,450,260,65],
+    "Salary":[200.25,140,60.75,80.18,90.15,450,260,65],
     "Age": [39,35,6,3,6,39,35,3],
     "Education": [3,3,1,0,1,3,3,0]
 
@@ -58,5 +58,6 @@ df7.plot.hexbin(x='Age', y= 'Salary', label= 'Ravi',gridsize = 10)
 df7.plot.pie(y='Salary')
 
 # #creating a pie plot based on Age, Salary and Education
-df7[['Age', 'Salary','Education']].plot.pie(subplots= True)
+#autopct will give till waht decimal values we want toe data in pie chart. over here 2 decimal values are given
+df7[['Age', 'Salary','Education']].plot.pie(subplots= True,fontsize= 8,autopct = '%.2f')
 plt.show()
