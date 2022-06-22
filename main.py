@@ -60,4 +60,9 @@ df7.plot.pie(y='Salary')
 # #creating a pie plot based on Age, Salary and Education
 #autopct will give till waht decimal values we want toe data in pie chart. over here 2 decimal values are given
 df7[['Age', 'Salary','Education']].plot.pie(subplots= True,fontsize= 8,autopct = '%.2f')
+
+
+#scatter matrix will give a graph which shows relationship between one element to another element of graph
+
+pd.plotting.scatter_matrix(df7,figsize=(10,10))
 plt.show()
