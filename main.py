@@ -1,7 +1,5 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 d7= {
     "Name":["Ravi", "Astha","Illisha","Lika","Radha","Ravi","Astha","Liku"], "Email":["r@gmail.com","a@gmail.com","i@gmail.com","l@gmail.com","ra@gmail.com","r@gmail.com","a@gmail.com","l@gmail.com"],
@@ -12,27 +10,27 @@ d7= {
 }
 df7= pd.DataFrame(d7)
 #
-# #plot graph horizontally
-gf1= df7.plot.barh()
-gf1.set_xlabel("X-Axis of Horizontal")
-gf1.set_ylabel("Y-Axis of Horizontal")
-
 #plot graph Vertically and it is the default graph
 gf2= df7.plot.bar()
 gf2.set_xlabel("X-Axis")
 gf2.set_ylabel("Y-Axis")
 #
-# #plot Histogram
+#plot graph horizontally
+gf1= df7.plot.barh()
+gf1.set_xlabel("X-Axis of Horizontal")
+gf1.set_ylabel("Y-Axis of Horizontal")
+#
+#plot Histogram
 gf3= df7.plot.hist()
 gf3.set_xlabel("X-Axis of Histogram")
 gf3.set_ylabel("Y-Axis of Histogram")
 #
-# # plot Histogram on basis of Age
+#plot Histogram on basis of Age
 gf4= df7['Age'].plot.hist()
 gf4.set_xlabel("X-Axis of Age Histogram")
 gf4.set_ylabel("Y-Axis of Age Histogram")
 #
-# # Another way of plotting Histogram on basis of Age
+#Another way of plotting Histogram on basis of Age
 gf5= df7['Age'].plot(kind ='hist', stacked = True, bins = 100,figsize= (10,10), title ="Histogram of Age", orientation = "horizontal")
 gf5.set_xlabel("X-Axis of Age Histogram")
 gf5.set_ylabel("Y-Axis of Age Histogram")
